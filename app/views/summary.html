@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+{% from "phase-banner/macro.njk"  import govukPhaseBanner %}
+{% from "footer/macro.njk" import govukFooter %}
+
+{% block pageTitle %}
+  Apply for legal aid
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "beta"
+    },
+    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+
+
+    <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+      <h1 class="govuk-heading-xl">Your legal aid applications</h1>
+
+      <p>
+        Space for text...
+      </p>
+    </main>
+
+    <table class="govuk-table">
+
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">Client's name</th>
+          <th class="govuk-table__header govuk-table__header--numeric" scope="col">Date started</th>
+          <th class="govuk-table__header govuk-table__header--numeric" scope="col">Case reference</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" scope="row">John Doe</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">02/04/2018</td>
+          <td class="govuk-table__cell govuk-table__cell--numeric">2018/LAA/4ewrgfdd</td>
+        </tr>
+      </tbody>
+    </table>
+
+{% endblock %}
+
+{% block footer %}
+    {{ govukFooter({
+      meta: {
+          items: [
+            {
+              href: "#",
+              text: "Help"
+            },
+            {
+              href: "https://www.gov.uk/help/cookies",
+              text: "Cookies"
+            },
+            {
+              href: "#",
+              text: "Contact"
+            },
+            {
+              href: "#",
+              text: "Feedback"
+            },
+            {
+              href: "#",
+              text: "Terms and conditions"
+            },
+            {
+              href: "https://mojdigital.blog.gov.uk/",
+              text: "MOJ Digital Services"
+            }
+          ]
+        }
+      }) }}
+    {% endblock %}
