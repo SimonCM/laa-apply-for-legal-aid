@@ -13,3 +13,54 @@ $govuk-global-styles: true;
 @import "components/cookie-banner";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+.govuk-details1 {
+  font-family: "nta", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #0b0c0c;
+  margin-bottom: 20px;
+  display: block;
+}
+
+
+.govuk-details__nocursor {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 5px;
+  padding-left: 25px;
+  color: #005ea5;
+  cursor: pointer;
+}
+
+.govuk-details__nocursor:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  display: none;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent;
+  -webkit-clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+  border-width: 7px 0 7px 12.124px;
+  border-left-color: inherit;
+}
+
+.govuk-details[open] > .govuk-details__nocursor:before {
+  display: none;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent;
+  -webkit-clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+  clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+  border-width: 12.124px 7px 0 7px;
+  border-top-color: inherit;
+}
