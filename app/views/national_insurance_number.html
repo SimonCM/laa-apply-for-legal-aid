@@ -24,6 +24,11 @@
 
 {% block content %}
 
+<div class="govuk-width-container">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
 <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
@@ -47,9 +52,11 @@
   </fieldset>
 </div>
 
-<a href="/details_1" role="button" class="govuk-button">
+<a href="/dwp_check" role="button" class="govuk-button">
   Continue
 </a>
+
+<p class="govuk-body govuk-!-margin-bottom-6"><a class="govuk-link" href="#">I don't have my clients National Insurance number</a></p>
 
 <div class="govuk-!-padding-bottom-6"></div>
 
@@ -72,7 +79,9 @@
   </div>
 </details>
 
-
+</div>
+</div>
+</div>
 
 {% endblock %}
 

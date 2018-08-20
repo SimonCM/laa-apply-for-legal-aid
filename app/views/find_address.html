@@ -85,9 +85,19 @@
   <div class="govuk-form-group">
     <label class="govuk-label" for="address-postcode">
     Postcode
-    <p class="govuk-body"><a>W1A 1AA</a><a href="/">Change</a></p>
+    <p class="govuk-body"><a>W1A 1AA</a> &nbsp <a href="/">Change</a></p>
   </label>
-    <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
+  <div class="govuk-form-group">
+<label class="govuk-label" for="sort">
+  Select an address
+</label>
+<select class="govuk-select govuk-!-width-two-thirds" id="sort" name="sort">
+  <option value="updated" selected>3 addresses found</option>
+  <option value="views">1 Main Street</option>
+  <option value="comments">2 Main Street</option>
+  <option value="published">3 Main Street</option>
+</select>
+</div>
 
   </div>
   </div>
