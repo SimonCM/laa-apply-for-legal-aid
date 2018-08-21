@@ -17,7 +17,7 @@
 
   {{ govukBackLink({
   text: "Back",
-  href: "/means_assessment_required"
+  href: "/online_banking_declaration"
 }) }}
 
 {% endblock %}
@@ -29,37 +29,32 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-      <h1 class="govuk-fieldset__heading">
-        Does your client use online banking?
-      </h1>
-    </legend>
-    <div class="govuk-!-padding-bottom-4
-    "></div>
-    <div class="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live-1" name="where-do-you-live" type="radio" value="england">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live-1">
-          Yes
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
-          No
-        </label>
-      </div>
-    </div>
-  </fieldset>
-</div>
+<fieldset class="govuk-fieldset">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+    <h1 class="govuk-fieldset__heading">
+      What is your client's email address?
+    </h1>
+  </legend>
 
-<a href="/online_banking_declaration" role="button" class="govuk-button">
+
+<div class="govuk-!-padding-bottom-8"></div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="full-name">
+    Enter email address
+  </label>
+    <input class="govuk-input govuk-!-width-three-quarters" id="full-name" name="full-name" type="text">
+  </div>
+
+</fieldset>
+
+
+
+<a href="#" role="button" class="govuk-button">
   Continue
 </a>
 
 <div class="govuk-!-padding-bottom-6"></div>
+
 
 <details class="govuk-details">
   <summary class="govuk-details__summary">
@@ -79,10 +74,11 @@
 		</p>
   </div>
 </details>
-</div>
+
 </div>
 </div>
 
+</div>
 
 {% endblock %}
 
