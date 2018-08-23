@@ -21,7 +21,7 @@
 {% block beforeContent %}
   {{ govukPhaseBanner({
     tag: {
-      text: "beta"
+      text: "prototype"
     },
     html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
   }) }}
@@ -53,10 +53,10 @@
 
         <p class="govuk-body">Use this service to apply for civil legal aid for cases involving:</p>
 
-        <ul class="govuk-list govuk-list--bullet">
-          <li>public family law</li>
-          <li>domestic violence or abuse</li>
-        </ul>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>public family law</li>
+            <li>domestic violence or abuse</li>
+          </ul>
 
         <p class="govuk-body">Use CCMS for Section 8 orders, cases involving the Special Children’s Act, and all other types of civil and criminal legal aid.</p>
 
@@ -73,8 +73,8 @@
         <p class="govuk-body">You cannot upload documents using this service. Use CCMS if you want to submit evidence to support your case.</p>
 
         <a href="/sign_in" role="button" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8">
-  Start
-</a>
+          Start
+        </a>
 
 <!--Not sure if Welsh is needed for provider service
 
@@ -112,6 +112,8 @@
 
 {% endblock %}
 
+
+
 {% block footer %}
     {{ govukFooter({
       meta: {
@@ -139,6 +141,10 @@
             {
               href: "https://mojdigital.blog.gov.uk/",
               text: "MOJ Digital Services"
+            },
+            {
+              href: "/prototype-admin/clear-data",
+              text: "Clear data"
             }
           ]
         }

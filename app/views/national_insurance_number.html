@@ -10,21 +10,19 @@
 {% block beforeContent %}
   {{ govukPhaseBanner({
     tag: {
-      text: "beta"
+      text: "prototype"
     },
     html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
   }) }}
 
   {{ govukBackLink({
   text: "Back",
-  href: "/find_address"
+  href: "client_details"
 }) }}
 
 {% endblock %}
 
 {% block content %}
-
-<div class="govuk-width-container">
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
@@ -39,6 +37,8 @@
 
 <div class="govuk-!-padding-bottom-8"></div>
 
+<form action="dwp_check" method="post" class="form">
+
     <div class="govuk-form-group">
       <label class="govuk-label" for="national-insurance-number">
         Enter National Insurance number
@@ -46,17 +46,19 @@
       <span id="national-insurance-number-hint" class="govuk-hint">
         For example, ‘QQ 12 34 56 C’
       </span>
-      <input class="govuk-input govuk-input--width-10" id="national-insurance-number" name="national-insurance-number" type="text" aria-describedby="national-insurance-number-hint">
+      <input class="govuk-input govuk-!-width-one-half" id="national-insurance-number" name="client-national-insurance-number" type="text">
     </div>
 
   </fieldset>
 </div>
 
-<a href="/dwp_check" role="button" class="govuk-button">
-  Continue
-</a>
+<button class="govuk-button">Continue</button>
 
-<p class="govuk-body govuk-!-margin-bottom-6"><a class="govuk-link" href="#">I don't have my clients National Insurance number</a></p>
+</form>
+
+<p class="govuk-body govuk-!-margin-bottom-6">
+
+<a class="govuk-link" href="#">I don't have my clients National Insurance number</a></p>
 
 <div class="govuk-!-padding-bottom-6"></div>
 
@@ -81,7 +83,7 @@
 
 </div>
 </div>
-</div>
+
 
 {% endblock %}
 

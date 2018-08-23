@@ -10,7 +10,7 @@
 {% block beforeContent %}
   {{ govukPhaseBanner({
     tag: {
-      text: "beta"
+      text: "prototype"
     },
     html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
   }) }}
@@ -24,34 +24,31 @@
 
 {% block content %}
 
-<div class="govuk-width-container">
 
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
 
-<fieldset class="govuk-fieldset">
-  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-    <h1 class="govuk-fieldset__heading">
-      What is your client's email address?
-    </h1>
-  </legend>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+  <h1 class="govuk-fieldset__heading">
+    What is your client's email address?
+  </h1>
+</legend>
 
 <div class="govuk-!-padding-bottom-8"></div>
-  <div class="govuk-form-group">
-    <label class="govuk-label" for="full-name">
-    Enter email address
-  </label>
-    <input class="govuk-input govuk-!-width-three-quarters" id="full-name" name="full-name" type="text">
-  </div>
 
-</fieldset>
+    <form action="check_answers" method="post" class="form">
 
+      <div class="govuk-form-group">
+          <label class="govuk-label govuk-!-font-weight-bold" for="email-address">
+          Email address
+          </label>
+        <input class="govuk-input govuk-!-width-three-quarters" id="email-address" name="client-email-address" type="text">
+      </div>
 
+      <button class="govuk-button">Continue</button>
 
-<a href="#" role="button" class="govuk-button">
-  Continue
-</a>
+    </form>
 
 <div class="govuk-!-padding-bottom-6"></div>
 
@@ -78,7 +75,7 @@
 </div>
 </div>
 
-</div>
+
 
 {% endblock %}
 
@@ -109,6 +106,10 @@
             {
               href: "https://mojdigital.blog.gov.uk/",
               text: "MOJ Digital Services"
+            },
+            {
+              href: "/prototype-admin/clear-data",
+              text: "Clear data"
             }
           ]
         }

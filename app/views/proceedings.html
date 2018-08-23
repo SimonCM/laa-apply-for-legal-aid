@@ -10,7 +10,7 @@
 {% block beforeContent %}
   {{ govukPhaseBanner({
     tag: {
-      text: "beta"
+      text: "prototype"
     },
     html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
   }) }}
@@ -62,7 +62,7 @@
      <span class="govuk-caption-m">Family > Domestic Abuse</span>
      Non-molestation order
    </h1></th>
-   <td class="govuk-table__cell" style="text-align:right;"> <a href="/details_1" class="govuk-button" style="top:15px;">
+   <td class="govuk-table__cell" style="text-align:right;"> <a href="/client_details" class="govuk-button" style="top:15px;">
      Select and continue</a></td>
  </tr>
  <tr class="govuk-table__row">
@@ -70,7 +70,7 @@
      <span class="govuk-caption-m">Family > Domestic Abuse</span>
      Non-molestation order - Appeal
    </h1></th>
-   <td class="govuk-table__cell" style="text-align:right;"> <a href="/details_1" class="govuk-button" style="top:15px;">
+   <td class="govuk-table__cell" style="text-align:right;"> <a href="/client_details" class="govuk-button" style="top:15px;">
      Select and continue</a> </td>
  </tr>
  <tr class="govuk-table__row">
@@ -78,7 +78,7 @@
      <span class="govuk-caption-m">Family > Domestic Abuse</span>
      Non-molestation order - Enforcement
    </h1></th>
-   <td class="govuk-table__cell" style="text-align:right;"> <a href="/details_1" class="govuk-button" style="top:15px;">
+   <td class="govuk-table__cell" style="text-align:right;"> <a href="/client_details" class="govuk-button" style="top:15px;">
      Select and continue</a> </td>
  </tr>
  </tbody>
@@ -137,6 +137,10 @@
             {
               href: "https://mojdigital.blog.gov.uk/",
               text: "MOJ Digital Services"
+            },
+            {
+              href: "/prototype-admin/clear-data",
+              text: "Clear data"
             }
           ]
         }
