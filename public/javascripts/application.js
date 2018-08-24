@@ -13,7 +13,7 @@ $(document).ready(function () {
   if ($('#mock-address-lookup').length) {
     // window.loaderTime = loaderTime || 5 // globaly defined in scripts.html
     $('.address-lookup-step2').hide()
-    $('js-launch-lookup').on('click', function (e) {
+    $('#mock-address-lookup .js-launch-lookup').on('click', function (e) {
       e.preventDefault()
       $('.address-lookup-step1').hide()
 

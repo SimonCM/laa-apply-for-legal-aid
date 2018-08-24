@@ -97,21 +97,35 @@ href: "/proceedings"
             <label class="govuk-label govuk-!-font-weight-bold" for="address-postcode">
             Postcode
             </label>
+            <span id="postcode-hint" class="govuk-hint">
+              Please use your client home address
+            </span>
           <input class="govuk-input govuk-input--width-10" id="address-postcode" name="client-address-postcode" type="text">
 
         </div>
 
-        <button class="js-launch-lookup govuk-button">Find address</button>
+        <button class="govuk-button">Find address</button>
+
+
+          </div>
+          </div>
+
+        </fieldset>
+
 
 
         <div class="address-lookup-step2">
           <div class="govuk-form-group">
-            <div class="govuk-form-group">
-              <label class="govuk-form-label form-label-bold" for="change-postcode">{{ data['client-address-postcode'] }}</label>
-              <span id="change-postcode" class="postcode"></span> <a href="#change-postcode" aria-label="change postcode" class="change-postcode">Change</a>
-            </div>
-            <label class="govuk-form-label govuk-form-label-bold" for="event-address">Select an address</label>
-            <select class="govuk-form-control" id="event-address" name="event-address">
+
+            <label class="govuk-label govuk-!-font-weight-bold" for="address-postcode">
+            Postcode
+            <p class="govuk-body govuk-!-font-weight-bold" style="padding-top:4px;"><a>{{ data['client-address-postcode'] }}</a> &nbsp <a class="govuk-body" href="client_details">Change</a></p>
+          </label>
+
+              <div class="govuk-!-padding-bottom-2"></div>
+
+            <label class="govuk-label govuk-!-font-weight-bold" for="event-address">Select an address</label>
+            <select class="govuk-select govuk-!-width-two-thirds" id="event-address" name="event-addresst">
               <option>5 addresses found</option>
               <option>162 Hilmorton Grounds, Ashlawn Rd, Rugby CV22 5QQ</option>
               <option>162B Hilmorton Grounds, Ashlawn Rd, Rugby CV22 5QQ</option>
@@ -119,20 +133,15 @@ href: "/proceedings"
               <option>164 Hilmorton Grounds, Ashlawn Rd, Rugby CV22 5QQ</option>
               <option>165 Hilmorton Grounds, Ashlawn Rd, Rugby CV22 5QQ</option>
             </select>
-            <div class="govuk-form-group">
-<label class="govuk-label" for="sort">
-  Sort by
-</label>
-<select class="govuk-select" id="event-address" name="event-address">
-  <option value="published">Recently published</option>
-  <option value="updated" selected>Recently updated</option>
-  <option value="views">Most views</option>
-  <option value="comments">Most comments</option>
-</select>
-</div>
+
           </div>
+
+          <p>
+            <a href="#">I can't find the address in the list</a>
+          </p>
+
           <div class="govuk-form-group">
-            <input class="button" type="submit" value="Continue">
+            <input class="govuk-button" type="submit" value="Continue">
           </div>
         </div>
 

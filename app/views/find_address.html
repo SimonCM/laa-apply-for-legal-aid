@@ -96,10 +96,10 @@
   <div class="govuk-form-group">
     <label class="govuk-label govuk-!-font-weight-bold" for="address-postcode">
     Postcode
-    <p class="govuk-body"><a>W1A 1AA</a> &nbsp <a href="client_details">Change</a></p>
+    <p class="govuk-body govuk-!-font-weight-bold" style="padding-top:4px;"><a>{{ data['client-address-postcode'] }}</a> &nbsp <a class="govuk-body" href="client_details">Change</a></p>
   </label>
   <div class="govuk-form-group">
-<label class="govuk-label" for="sort">
+<label class="govuk-label govuk-!-font-weight-bold" for="sort">
   Select an address
 </label>
 <select class="govuk-select govuk-!-width-two-thirds" id="sort" name="sort">
@@ -116,54 +116,13 @@
 
 </fieldset>
 
+  <p>
+    <a href="#">I can't find the address in the list</a>
+  </p>
+
 <a href="/national_insurance_number" role="button" class="govuk-button">
   Continue
 </a>
-
-<details class="govuk-details">
-  <summary class="govuk-details__summary ">
-    <span class="govuk-details__summary-text">
-    Enter address manually
-    </span>
-  </summary>
-  <div class="govuk-!-padding-bottom-4"></div>
-
-  <div class="govuk-form-group">
-<label class="govuk-label" for="address-line-1">
-Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
-</label>
-<input class="govuk-input govuk-!-width-two-thirds" id="two-thirds" name="two-thirds" type="text">
-</div>
-
-<div class="govuk-form-group">
-<label class="govuk-label" for="address-line-2">
-<span class="govuk-visually-hidden">Building and street line 2 of 2</span>
-</label>
-<input class="govuk-input govuk-!-width-two-thirds" id="two-thirds" name="two-thirds" type="text">
-</div>
-
-<div class="govuk-form-group">
-<label class="govuk-label" for="address-town">
-Town or city
-</label>
-<input class="govuk-input govuk-!-width-one-third" id="one-third" name="one-third" type="text">
-</div>
-
-<div class="govuk-form-group">
-<label class="govuk-label" for="address-county">
-County
-</label>
-<input class="govuk-input govuk-!-width-one-third" id="one-third" name="one-third" type="text">
-</div>
-
-<div class="govuk-form-group">
-<label class="govuk-label" for="address-postcode">
-Postcode
-</label>
-<input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
-</div>
-
-</details>
 
 <div class="govuk-!-padding-bottom-6"></div>
 
