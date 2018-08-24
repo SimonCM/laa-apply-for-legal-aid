@@ -13,20 +13,11 @@ $(document).ready(function () {
   if ($('#mock-address-lookup').length) {
     // window.loaderTime = loaderTime || 5 // globaly defined in scripts.html
     $('.address-lookup-step2').hide()
-    $('#mock-address-lookup .js-launch-lookup').on('click', function (e) {
+    $('js-launch-lookup').on('click', function (e) {
       e.preventDefault()
       $('.address-lookup-step1').hide()
 
-      // Initialise loader
-      var loader = new GOVUK.Loader()
-      loader.init({
-        container: 'address-lookup-loader',
-        label: true,
-        labelText: 'Finding address...'
-      })
-      $('#loader').focus()
-      // setTimeout(function () { $('#loader').focus() }, 2 * 1000)
-      setTimeout(function () { loadContent(loader) }, 7 * 1000)
+
 
       // Copy the postcode and place it into a span on the second step
       var postcode = $('.address-lookup-step1 input').val()
@@ -38,3 +29,12 @@ $(document).ready(function () {
       $('.address-lookup-step2').hide()
       $('.address-lookup-step1').show()
     })
+  }
+
+  // Loader component
+  function loadContent (loader) {
+    loader.updateMessage('5 addresses found')
+    loader.stop()
+    $('.address-lookup-step2').show()
+    // $('#event-address').focus() // needed for AT
+  }

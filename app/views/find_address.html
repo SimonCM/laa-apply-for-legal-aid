@@ -10,55 +10,66 @@
 {% block beforeContent %}
   {{ govukPhaseBanner({
     tag: {
-      text: "beta"
+      text: "prototype"
     },
     html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
   }) }}
 
   {{ govukBackLink({
   text: "Back",
-  href: "/details_1"
+  href: "/proceedings"
 }) }}
 
 {% endblock %}
 
 {% block content %}
 
-<fieldset class="govuk-fieldset">
-  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-    <h1 class="govuk-fieldset__heading">
-      Enter your client's details
-    </h1>
-  </legend>
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+  <h1 class="govuk-fieldset__heading">
+    Enter your client's details
+  </h1>
+</legend>
 
 <div class="govuk-!-padding-bottom-8"></div>
-  <div class="govuk-form-group">
-    <label class="govuk-label" for="full-name">
-    Enter full name
-  </label>
-  <span id="dob-hint" class="govuk-hint">
-    Including all middle names
-  </span>
-    <input class="govuk-input govuk-!-width-two-thirds" id="full-name" name="full-name" type="text">
-  </div>
 
-<div class="govuk-!-padding-bottom-4"></div>
-  <label class="govuk-label" for="full-name">
-  Enter date of birth
-  </label>
-  <span id="dob-hint" class="govuk-hint">
-     For example, 31 3 1980
-   </span>
-     <div class="govuk-date-input" id="dob">
+    <form action="find_address" id="mock-address-lookup" method="post" class="form">
+
+      <div class="govuk-form-group">
+
+          <label class="govuk-label govuk-!-font-weight-bold" for="first-name">
+          First name
+          </label>
+        <input class="govuk-input govuk-!-width-one-half" id="first-name" name="client-first-name" type="text" placeholder="{{ data['client-first-name'] }}">
+      </div>
+
+      <div class="govuk-!-padding-bottom-2"></div>
+
+      <div class="govuk-form-group">
+          <label class="govuk-label govuk-!-font-weight-bold" for="last-name">
+          Last name
+          </label>
+        <input class="govuk-input govuk-!-width-one-half" id="last-name" name="client-last-name" type="text" placeholder="{{ data['client-last-name'] }}">
+      </div>
+
+      <div class="govuk-!-padding-bottom-2"></div>
+
+      <label class="govuk-label govuk-!-font-weight-bold" for="full-name">
+      Date of birth
+      </label>
+         <span id="dob-hint" class="govuk-hint">
+           For example, 31 3 1980
+         </span>
+      <div class="govuk-date-input" id="dob">
 
        <div class="govuk-date-input__item">
          <div class="govuk-form-group">
-           <label class="govuk-label govuk-date-input__label" for="dob-day">
-           Day
-         </label>
-           <input class="govuk-input govuk-date-input__input govuk-input--width-2 " id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+            <label class="govuk-label govuk-date-input__label" for="dob-day">
+              Day
+            </label>
+           <input class="govuk-input govuk-date-input__input govuk-input--width-2 " id="dob-day" name="client-dob-day" type="number" pattern="[0-9]*" placeholder="{{ data['client-dob-day'] }}">
          </div>
        </div>
 
@@ -67,7 +78,7 @@
            <label class="govuk-label govuk-date-input__label" for="dob-month">
            Month
          </label>
-           <input class="govuk-input govuk-date-input__input govuk-input--width-2 " id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+           <input class="govuk-input govuk-date-input__input govuk-input--width-2 " id="dob-month" name="client-dob-month" type="number" pattern="[0-9]*" placeholder="{{ data['client-dob-month'] }}">
          </div>
        </div>
 
@@ -76,16 +87,16 @@
            <label class="govuk-label govuk-date-input__label" for="dob-year">
            Year
          </label>
-           <input class="govuk-input govuk-date-input__input govuk-input--width-4 " id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+           <input class="govuk-input govuk-date-input__input govuk-input--width-4 " id="dob-year" name="client-dob-year" type="number" pattern="[0-9]*" placeholder="{{ data['client-dob-year'] }}">
          </div>
        </div>
-     </div>
+   </div>
 
 <div class="govuk-!-padding-bottom-4"></div>
   <div class="govuk-form-group">
-    <label class="govuk-label" for="address-postcode">
+    <label class="govuk-label govuk-!-font-weight-bold" for="address-postcode">
     Postcode
-    <p class="govuk-body"><a>W1A 1AA</a> &nbsp <a href="/">Change</a></p>
+    <p class="govuk-body"><a>W1A 1AA</a> &nbsp <a href="client_details">Change</a></p>
   </label>
   <div class="govuk-form-group">
 <label class="govuk-label" for="sort">
@@ -174,6 +185,8 @@ Postcode
 		</p>
   </div>
 </details>
+
+</div>
 
 {% endblock %}
 

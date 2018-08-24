@@ -13,21 +13,7 @@ $govuk-global-styles: true;
 @import "components/cookie-banner";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
-
-
-#address-lookup-loader{
-  clear: both;
-}
-.address-lookup-step2{
-  display: none;
-}
-
-
-// Postcode
-#event-postcode, .postcode {
-  text-transform: uppercase;
-}
-
-.change-postcode {
-  margin-left: 5px;
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    opacity: 1; /* Firefox */
 }

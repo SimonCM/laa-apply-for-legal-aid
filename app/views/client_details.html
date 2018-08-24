@@ -34,9 +34,10 @@ href: "/proceedings"
 
   <div class="govuk-!-padding-bottom-8"></div>
 
-      <form action="national_insurance_number" method="post" class="form">
+      <form action="find_address" id="mock-address-lookup" method="post" class="form">
 
         <div class="govuk-form-group">
+
             <label class="govuk-label govuk-!-font-weight-bold" for="first-name">
             First name
             </label>
@@ -100,9 +101,87 @@ href: "/proceedings"
 
         </div>
 
-        <button class="govuk-button">Find address</button>
+        <button class="js-launch-lookup govuk-button">Find address</button>
+
+
+        <div class="address-lookup-step2">
+          <div class="govuk-form-group">
+            <div class="govuk-form-group">
+              <label class="govuk-form-label form-label-bold" for="change-postcode">{{ data['client-address-postcode'] }}</label>
+              <span id="change-postcode" class="postcode"></span> <a href="#change-postcode" aria-label="change postcode" class="change-postcode">Change</a>
+            </div>
+            <label class="govuk-form-label govuk-form-label-bold" for="event-address">Select an address</label>
+            <select class="govuk-form-control" id="event-address" name="event-address">
+              <option>5 addresses found</option>
+              <option>162 Hilmorton Grounds, Ashlawn Rd, Rugby CV22 5QQ</option>
+              <option>162B Hilmorton Grounds, Ashlawn Rd, Rugby CV22 5QQ</option>
+              <option>163 Hilmorton Grounds, Ashlawn Rd, Rugby CV22 5QQ</option>
+              <option>164 Hilmorton Grounds, Ashlawn Rd, Rugby CV22 5QQ</option>
+              <option>165 Hilmorton Grounds, Ashlawn Rd, Rugby CV22 5QQ</option>
+            </select>
+            <div class="govuk-form-group">
+<label class="govuk-label" for="sort">
+  Sort by
+</label>
+<select class="govuk-select" id="event-address" name="event-address">
+  <option value="published">Recently published</option>
+  <option value="updated" selected>Recently updated</option>
+  <option value="views">Most views</option>
+  <option value="comments">Most comments</option>
+</select>
+</div>
+          </div>
+          <div class="govuk-form-group">
+            <input class="button" type="submit" value="Continue">
+          </div>
+        </div>
 
       </form>
+
+      <details class="govuk-details">
+        <summary class="govuk-details__summary ">
+          <span class="govuk-details__summary-text">
+          Enter address manually
+          </span>
+        </summary>
+        <div class="govuk-!-padding-bottom-4"></div>
+
+        <div class="govuk-form-group">
+      <label class="govuk-label" for="address-line-1">
+      Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
+      </label>
+      <input class="govuk-input govuk-!-width-two-thirds" id="two-thirds" name="two-thirds" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+      <label class="govuk-label" for="address-line-2">
+      <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+      </label>
+      <input class="govuk-input govuk-!-width-two-thirds" id="two-thirds" name="two-thirds" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+      <label class="govuk-label" for="address-town">
+      Town or city
+      </label>
+      <input class="govuk-input govuk-!-width-one-third" id="one-third" name="one-third" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+      <label class="govuk-label" for="address-county">
+      County
+      </label>
+      <input class="govuk-input govuk-!-width-one-third" id="one-third" name="one-third" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+      <label class="govuk-label" for="address-postcode">
+      Postcode
+      </label>
+      <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
+      </div>
+
+      </details>
 
       <div class="govuk-!-padding-bottom-6"></div>
 
