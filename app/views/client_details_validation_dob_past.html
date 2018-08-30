@@ -7,12 +7,6 @@
   Apply for legal aid
 {% endblock %}
 
-{% block pageScripts %}
-<script>
-
-</script>
-{% endblock %}
-
 {% block beforeContent %}
 {{ govukPhaseBanner({
 tag: {
@@ -23,11 +17,27 @@ html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a
 
 {{ govukBackLink({
 text: "Back",
-href: "/search"
+href: "/proceedings"
 }) }}
 {% endblock %}
 
 {% block content %}
+
+<div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="error-summary">
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    There is a problem
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>
+        <a href="#full-name">Enter full name</a>
+      </li>
+      <li>
+        <a href="#dob">Enter date of birth</a>
+      </li>
+    </ul>
+  </div>
+</div>
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
@@ -40,119 +50,71 @@ href: "/search"
 
   <div class="govuk-!-padding-bottom-8"></div>
 
-      <form action="find_address" id="mock-address-lookup" method="post" class="form">
+        <div class="govuk-form-group govuk-form-group--error">
+  <fieldset class="govuk-fieldset" aria-describedby="dob-hint dob-error" role="group">
+    <label class="govuk-label govuk-!-font-weight-bold" for="full-name">
+    Date of birth
+    </label>
+    <span id="dob-hint" class="govuk-hint">
+      For example, 31 3 1980
+    </span>
+    <span id="dob-error" class="govuk-error-message">
+      Date of birth must be in the past
+    </span>
+    <div class="govuk-date-input" id="dob">
 
+      <div class="govuk-date-input__item">
         <div class="govuk-form-group">
-
-            <label class="govuk-label govuk-!-font-weight-bold" for="first-name">
-            First name
-            </label>
-          <input class="govuk-input govuk-!-width-one-half" id="first-name" name="client-first-name" type="text">
+          <label class="govuk-label govuk-date-input__label" for="dob-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2 " id="dob-day" name="dob-day" type="number" value="6" pattern="[0-9]*">
         </div>
+      </div>
 
-        <div class="govuk-!-padding-bottom-2"></div>
-
+      <div class="govuk-date-input__item">
         <div class="govuk-form-group">
-            <label class="govuk-label govuk-!-font-weight-bold" for="last-name">
-            Last name
-            </label>
-          <input class="govuk-input govuk-!-width-one-half" id="last-name" name="client-last-name" type="text">
+          <label class="govuk-label govuk-date-input__label" for="dob-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2 " id="dob-month" name="dob-month" type="number" value="3" pattern="[0-9]*">
         </div>
+      </div>
 
-        <div class="govuk-!-padding-bottom-2"></div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4 " id="dob-year" name="dob-year" type="number" value="2076" pattern="[0-9]*">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
 
-        <label class="govuk-label govuk-!-font-weight-bold" for="full-name">
-        Date of birth
-        </label>
-           <span id="dob-hint" class="govuk-hint">
-             For example, 31 3 1980
-           </span>
-        <div class="govuk-date-input" id="dob">
 
-         <div class="govuk-date-input__item">
-           <div class="govuk-form-group">
-              <label class="govuk-label govuk-date-input__label" for="dob-day">
-                Day
-              </label>
-             <input class="govuk-input govuk-date-input__input govuk-input--width-2 " id="dob-day" name="client-dob-day" type="number" pattern="[0-9]*">
-           </div>
-         </div>
-
-         <div class="govuk-date-input__item">
-           <div class="govuk-form-group">
-             <label class="govuk-label govuk-date-input__label" for="dob-month">
-             Month
-           </label>
-             <input class="govuk-input govuk-date-input__input govuk-input--width-2 " id="dob-month" name="client-dob-month" type="number" pattern="[0-9]*">
-           </div>
-         </div>
-
-         <div class="govuk-date-input__item">
-           <div class="govuk-form-group">
-             <label class="govuk-label govuk-date-input__label" for="dob-year">
-             Year
-           </label>
-             <input class="govuk-input govuk-date-input__input govuk-input--width-4 " id="dob-year" name="client-dob-year" type="number" pattern="[0-9]*">
-           </div>
-         </div>
-     </div>
 
      <div class="govuk-!-padding-bottom-2"></div>
 
-<div class="address-lookup-step1">
         <div class="govuk-form-group">
             <label class="govuk-label govuk-!-font-weight-bold" for="address-postcode">
             Postcode
             </label>
             <span id="postcode-hint" class="govuk-hint">
-              Please use your client's home address
+              Please use your client home address
             </span>
-          <input class="govuk-input govuk-input--width-10" id="address-postcode" name="client-address-postcode" type="text">
+          <input class="govuk-input govuk-input--width-10" id="address-postcode" name="client-address-postcode" type="text" value="W1A 1AA">
 
         </div>
 
-        <input type="submit" class="govuk-button" id="find-address" value="Find address">
-</div>
+        <button class="govuk-button">Find address</button>
+
 
           </div>
           </div>
 
         </fieldset>
-
-
-
-        <div class="address-lookup-step2">
-          <div class="govuk-form-group">
-
-            <label class="govuk-label govuk-!-font-weight-bold" for="address-postcode">
-            Postcode
-            <p class="govuk-body govuk-!-font-weight-bold" style="padding-top:4px;"><a>{{ data['client-address-postcode'] }}</a> &nbsp <a class="govuk-body" href="client_details">Change</a></p>
-          </label>
-
-              <div class="govuk-!-padding-bottom-2"></div>
-
-            <label class="govuk-label govuk-!-font-weight-bold" for="event-address">Select an address</label>
-            <select class="govuk-select govuk-!-width-two-thirds" id="event-address" name="event-addresst">
-              <option>5 addresses found</option>
-              <option>1 Main Street, London, {{ data['client-address-postcode'] }}</option>
-              <option>2 Main Street, London, {{ data['client-address-postcode'] }}</option>
-              <option>3 Main Street, London, {{ data['client-address-postcode'] }}</option>
-              <option>4 Main Street, London, {{ data['client-address-postcode'] }}</option>
-              <option>5 Main Street, London, {{ data['client-address-postcode'] }}</option>
-            </select>
-
-          </div>
-
-          <p>
-            <a href="#">I can't find the address in the list</a>
-          </p>
-
-          <div class="govuk-form-group">
-            <input class="govuk-button" type="submit" value="Continue">
-          </div>
-        </div>
-
-      </form>
 
       <details class="govuk-details">
         <summary class="govuk-details__summary ">

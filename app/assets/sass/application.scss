@@ -17,3 +17,10 @@ $govuk-global-styles: true;
     color: black;
     opacity: 1; /* Firefox */
 }
+
+
+div.proceeding-item {
+    margin-top: 20px;
+    padding: 0px;
+    border-bottom: 1px solid #ccc;
+}
