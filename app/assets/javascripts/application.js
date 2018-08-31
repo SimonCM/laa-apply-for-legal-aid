@@ -15,4 +15,5 @@ $('#find-address').on('click', function (e) {
   e.preventDefault()
   $('.address-lookup-step1').hide()
   $('.address-lookup-step2').show()
+  $('.manual-address').hide()
 })

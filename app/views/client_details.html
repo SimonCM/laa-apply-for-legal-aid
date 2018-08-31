@@ -40,7 +40,7 @@ href: "/search"
 
   <div class="govuk-!-padding-bottom-8"></div>
 
-      <form action="find_address" id="mock-address-lookup" method="post" class="form">
+      <form action="national_insurance_number" id="mock-address-lookup" method="post" class="form">
 
         <div class="govuk-form-group">
 
@@ -107,7 +107,7 @@ href: "/search"
             <span id="postcode-hint" class="govuk-hint">
               Please use your client's home address
             </span>
-          <input class="govuk-input govuk-input--width-10" id="address-postcode" name="client-address-postcode" type="text">
+          <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
 
         </div>
 
@@ -126,19 +126,21 @@ href: "/search"
 
             <label class="govuk-label govuk-!-font-weight-bold" for="address-postcode">
             Postcode
-            <p class="govuk-body govuk-!-font-weight-bold" style="padding-top:4px;"><a>{{ data['client-address-postcode'] }}</a> &nbsp <a class="govuk-body" href="client_details">Change</a></p>
+            <p class="govuk-body govuk-!-font-weight-bold" style="padding-top:4px;"><a>W1A 1AA</a> &nbsp <a class="govuk-body" href="client_details">Change</a></p>
+
           </label>
+
 
               <div class="govuk-!-padding-bottom-2"></div>
 
             <label class="govuk-label govuk-!-font-weight-bold" for="event-address">Select an address</label>
-            <select class="govuk-select govuk-!-width-two-thirds" id="event-address" name="event-addresst">
+            <select class="govuk-select govuk-!-width-one-half" id="event-address" name="event-addresst">
               <option>5 addresses found</option>
-              <option>1 Main Street, London, {{ data['client-address-postcode'] }}</option>
-              <option>2 Main Street, London, {{ data['client-address-postcode'] }}</option>
-              <option>3 Main Street, London, {{ data['client-address-postcode'] }}</option>
-              <option>4 Main Street, London, {{ data['client-address-postcode'] }}</option>
-              <option>5 Main Street, London, {{ data['client-address-postcode'] }}</option>
+              <option>1 Main Street, London, W1A 1AA </option>
+              <option>2 Main Street, London, W1A 1AA </option>
+              <option>3 Main Street, London, W1A 1AA </option>
+              <option>4 Main Street, London, W1A 1AA </option>
+              <option>5 Main Street, London, W1A 1AA </option>
             </select>
 
           </div>
@@ -153,7 +155,7 @@ href: "/search"
         </div>
 
       </form>
-
+<div class="manual-address">
       <details class="govuk-details">
         <summary class="govuk-details__summary ">
           <span class="govuk-details__summary-text">
@@ -198,7 +200,7 @@ href: "/search"
       </div>
 
       </details>
-
+</div>
       <div class="govuk-!-padding-bottom-6"></div>
 
     <details class="govuk-details">

@@ -17,7 +17,7 @@ html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a
 
 {{ govukBackLink({
 text: "Back",
-href: "#"
+href: "email_address"
 }) }}
 {% endblock %}
 
@@ -93,7 +93,7 @@ href: "#"
            Home address
          </dt>
          <dd class="app-check-your-answers__answer">
-           Main Road<br/>London<br/>{{ data['client-address-postcode'] }}
+           Main Road<br/>London<br/>{{ data['address-postcode'] }}
          </dd>
          <dd class="app-check-your-answers__change">
          </dd>
