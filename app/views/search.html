@@ -54,17 +54,23 @@ $('#search').hideseek({
 </div>
 </div>
 </div>
-                <div id="search-field" class="govuk-form-group">
-    <label class="govuk-heading-m" for="reference-number" style="margin-bottom: 10px">
-        Search
-        <span class="govuk-caption-m">
-            For example by category of law, matter type or legal proceeding 
-        </span>
-    </label>
-    <input class="govuk-input govuk-!-width-two-thirds" id="search" name="two-thirds" type="text" data-list="#proceedings-list">
-</div>
+
+      <div id="search-field" class="govuk-form-group">
+        <label class="govuk-heading-m" for="reference-number" style="margin-bottom: 10px">
+          Search for legal proceedings
+            <span class="govuk-caption-m">
+              For example by category of law, matter type or legal proceeding
+              no results found
+            </span>
+        </label>
+          <input class="govuk-input govuk-!-width-two-thirds" id="search" name="two-thirds" type="text" data-list="#proceedings-list">
+            <a class="clear-search" href="/search" style="margin-left: 10px; font-size: 19px">Clear search</a>
+      </div>
+
 
 <div class="govuk-grid-row">
+
+
 
     <div id="proceedings-list" class="govuk-grid-column-full ">
 
