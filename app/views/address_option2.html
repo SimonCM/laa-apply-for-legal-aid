@@ -18,7 +18,7 @@
 tag: {
   text: "prototype"
 },
-html: 'This is a new service – your <a class="govuk-link" href="">feedback</a> will help us to improve it.'
+html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
 }) }}
 
 {{ govukBackLink({
@@ -126,7 +126,7 @@ href: "/search"
 
             <label class="govuk-label govuk-!-font-weight-bold" for="address-postcode">
             Postcode
-            <p class="govuk-body govuk-!-font-weight-bold" style="padding-top:4px;"><a>W1A 1AA</a> &nbsp <a class="govuk-body change-link" id="change-address" >Change</a></p>
+            <p class="govuk-body govuk-!-font-weight-bold" style="padding-top:4px;"><a>W1A 1AA</a> &nbsp <a class="govuk-body" href="client_details">Change</a></p>
 
           </label>
 
@@ -146,7 +146,7 @@ href: "/search"
           </div>
 
           <p>
-            <a class="govuk-link" href="manual_address">I can't find the address in the list</a>
+            <a href="#">I can't find the address in the list</a>
           </p>
 
           <div class="govuk-form-group">
@@ -154,8 +154,8 @@ href: "/search"
           </div>
         </div>
 
-
-<div class="manual-address">
+      </form>
+<!-- <div class="manual-address">
       <details class="govuk-details">
         <summary class="govuk-details__summary ">
           <span class="govuk-details__summary-text">
@@ -199,11 +199,8 @@ href: "/search"
       <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
       </div>
 
-      <input class="govuk-button" type="submit" value="Continue">
-
       </details>
-</div>
-</form>
+</div> -->
       <div class="govuk-!-padding-bottom-6"></div>
 
     <details class="govuk-details">

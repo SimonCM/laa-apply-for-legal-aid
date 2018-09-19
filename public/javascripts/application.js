@@ -17,3 +17,11 @@ $('#find-address').on('click', function (e) {
   $('.address-lookup-step2').show()
   $('.manual-address').hide()
 })
+
+$('#change-address').on('click', function (e) {
+  e.preventDefault()
+  $('.address-lookup-step1').show()
+  $('.address-lookup-step2').hide()
+  $('.manual-address').show()
+  $('#address-postcode').val("")
+})
