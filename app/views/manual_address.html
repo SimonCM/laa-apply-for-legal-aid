@@ -23,7 +23,7 @@ html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a
 
 {{ govukBackLink({
 text: "Back",
-href: "/client_details"
+href: "/address"
 }) }}
 {% endblock %}
 
@@ -45,7 +45,7 @@ href: "/client_details"
 
 
 
-      <form action="national_insurance_number" id="mock-address-lookup" method="post" class="form">
+      <form action="dwp_check" id="mock-address-lookup" method="post" class="form">
 
         <div class="govuk-form-group">
         <label class="govuk-label" for="address-line-1">
@@ -86,26 +86,6 @@ href: "/client_details"
 
   </form>
 
-      <div class="govuk-!-padding-bottom-6"></div>
-
-    <details class="govuk-details">
-      <summary class="govuk-details__summary">
-        <span class="govuk-details__summary-text">
-          Help with completing this application
-        </span>
-      </summary>
-      <div class="govuk-details__text">
-        <p>For any queries about your application, contact the following:
-          <br><br>
-            Case enquires (Monday to Friday, 09:00 - 17:00) <br>
-            Phone: 0300 200 2020
-    		   <br><br>
-    		    Technical support (Monday to Friday, 09:00 - 17:00) <br>
-    		    Email: <a href="#noop">online-support@justice.gov.uk</a> <br>
-    		    hone: 0300 200 2020
-    		</p>
-      </div>
-    </details>
 
 
 

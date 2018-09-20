@@ -40,7 +40,7 @@ href: "/search"
 
   <div class="govuk-!-padding-bottom-8"></div>
 
-      <form action="national_insurance_number" id="mock-address-lookup" method="post" class="form">
+      <form action="address" id="mock-address-lookup" method="post" class="form">
 
         <div class="govuk-form-group">
 
@@ -99,134 +99,42 @@ href: "/search"
 
      <div class="govuk-!-padding-bottom-2"></div>
 
-<div class="address-lookup-step1">
-        <div class="govuk-form-group">
-            <label class="govuk-label govuk-!-font-weight-bold" for="address-postcode">
-            Postcode
-            </label>
-            <span id="postcode-hint" class="govuk-hint">
-              Postcode must be a valid UK postcode.
-            </span>
-          <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
+           <label class="govuk-label govuk-!-font-weight-bold" for="national-insurance-number">
+             Enter National Insurance number
+           </label>
+           <span id="national-insurance-number-hint" class="govuk-hint">
+             For example, ‘QQ 12 34 56 C’
+           </span>
+           <input class="govuk-input govuk-!-width-one-half" id="national-insurance-number" name="client-national-insurance-number" type="text">
 
-        </div>
+      <div class="govuk-!-padding-bottom-6"></div>
 
-        <input type="submit" class="govuk-button" id="find-address" value="Find address">
-</div>
-
-          </div>
-          </div>
-
-        </fieldset>
-
-
-
-        <div class="address-lookup-step2">
-          <div class="govuk-form-group">
-
-            <label class="govuk-label govuk-!-font-weight-bold" for="address-postcode">
-            Postcode
-            <p class="govuk-body govuk-!-font-weight-bold" style="padding-top:4px;"><a>W1A 1AA</a> &nbsp <a class="govuk-body change-link" id="change-address" >Change</a></p>
-
-          </label>
-
-
-              <div class="govuk-!-padding-bottom-2"></div>
-
-            <label class="govuk-label govuk-!-font-weight-bold" for="event-address">Select an address</label>
-            <select class="govuk-select govuk-!-width-one-half" id="event-address" name="event-addresst">
-              <option>5 addresses found</option>
-              <option>1 Main Street, London, W1A 1AA </option>
-              <option>2 Main Street, London, W1A 1AA </option>
-              <option>3 Main Street, London, W1A 1AA </option>
-              <option>4 Main Street, London, W1A 1AA </option>
-              <option>5 Main Street, London, W1A 1AA </option>
-            </select>
+           <details class="govuk-details">
+             <summary class="govuk-details__summary">
+               <span class="govuk-details__summary-text">
+                 I don't have my clients National Insurance number
+               </span>
+             </summary>
+             <div class="govuk-details__text">
+               <p>For any queries about your application, contact the following:
+                 <br><br>
+                     Case enquires (Monday to Friday, 09:00 - 17:00) <br>
+                           Phone: 0300 200 2020
+           		    <br><br>
+           		        Technical support (Monday to Friday, 09:00 - 17:00) <br>
+           		           Email: <a href="#noop">online-support@justice.gov.uk</a> <br>
+           		              Phone: 0300 200 2020
+           		</p>
+             </div>
+           </details>
 
           </div>
-
-          <p>
-            <a class="govuk-link" href="manual_address">I can't find the address in the list</a>
-          </p>
+          </div>
 
           <div class="govuk-form-group">
             <input class="govuk-button" type="submit" value="Continue">
           </div>
-        </div>
-
-
-<div class="manual-address">
-      <details class="govuk-details">
-        <summary class="govuk-details__summary ">
-          <span class="govuk-details__summary-text">
-          Enter address manually
-          </span>
-        </summary>
-        <div class="govuk-!-padding-bottom-4"></div>
-
-        <div class="govuk-form-group">
-      <label class="govuk-label" for="address-line-1">
-      Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
-      </label>
-      <input class="govuk-input govuk-!-width-two-thirds" id="two-thirds" name="two-thirds" type="text">
-      </div>
-
-      <div class="govuk-form-group">
-      <label class="govuk-label" for="address-line-2">
-      <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
-      </label>
-      <input class="govuk-input govuk-!-width-two-thirds" id="two-thirds" name="two-thirds" type="text">
-      </div>
-
-      <div class="govuk-form-group">
-      <label class="govuk-label" for="address-town">
-      Town or city
-      </label>
-      <input class="govuk-input govuk-!-width-one-third" id="one-third" name="one-third" type="text">
-      </div>
-
-      <div class="govuk-form-group">
-      <label class="govuk-label" for="address-county">
-      County
-      </label>
-      <input class="govuk-input govuk-!-width-one-third" id="one-third" name="one-third" type="text">
-      </div>
-
-      <div class="govuk-form-group">
-      <label class="govuk-label" for="address-postcode">
-      Postcode
-      </label>
-      <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
-      </div>
-
-      <input class="govuk-button" type="submit" value="Continue">
-
-      </details>
-</div>
 </form>
-      <div class="govuk-!-padding-bottom-6"></div>
-
-    <details class="govuk-details">
-      <summary class="govuk-details__summary">
-        <span class="govuk-details__summary-text">
-          Help with completing this application
-        </span>
-      </summary>
-      <div class="govuk-details__text">
-        <p>For any queries about your application, contact the following:
-          <br><br>
-            Case enquires (Monday to Friday, 09:00 - 17:00) <br>
-            Phone: 0300 200 2020
-    		   <br><br>
-    		    Technical support (Monday to Friday, 09:00 - 17:00) <br>
-    		    Email: <a href="#noop">online-support@justice.gov.uk</a> <br>
-    		    hone: 0300 200 2020
-    		</p>
-      </div>
-    </details>
-
-    </div>
-  </div>
 {% endblock %}
 
 {% block footer %}
