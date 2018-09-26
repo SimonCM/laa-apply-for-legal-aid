@@ -17,7 +17,7 @@
 
   {{ govukBackLink({
   text: "Back",
-  href: "national_insurance_number"
+  href: "client_details"
 }) }}
 
 {% endblock %}
@@ -30,11 +30,8 @@
       <div class="govuk-grid-column-two-thirds">
         <div class="govuk-panel govuk-panel--confirmation">
           <h2 class="govuk-panel__title">
-            Financial means assessment required
+            'Client name' <br>must complete a financial assessment
           </h2>
-          <div class="govuk-panel__body">
-            'Client name' will need to complete a financial assessment
-          </div>
         </div>
 
 <div class="govuk-!-padding-top-4"></div>
@@ -43,7 +40,7 @@
 
         <p class="govuk-body">Your client does not receive benefits that qualify for legal aid.</p>
 
-        <p class="govuk-body">Your client's gross income is over £1,860.00 a month</p>
+        <p class="govuk-body">Your client's gross income is less than £2,657.00 a month</p>
 
         <h3 class="govuk-heading-m">What happens next</h3>
 
