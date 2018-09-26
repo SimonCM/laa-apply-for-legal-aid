@@ -25,3 +25,11 @@ $('#change-address').on('click', function (e) {
   $('.manual-address').show()
   $('#address-postcode').val("")
 })
+
+$('#change-button').on('click', function (e) {
+  e.preventDefault()
+  $('.address-lookup-step1').hide()
+  $('.address-lookup-step2').show()
+  $('.manual-address').hide()
+  $('#address-postcode').val("")
+})
