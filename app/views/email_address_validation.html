@@ -17,7 +17,7 @@
 
   {{ govukBackLink({
   text: "Back",
-  href: "#"
+  href: "/online_banking_declaration"
 }) }}
 
 {% endblock %}
@@ -40,17 +40,26 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-<div class="govuk-form-group govuk-form-group--error">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl ">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
   <h1 class="govuk-fieldset__heading">
     What is your client's email address?
   </h1>
 </legend>
 
-    <form action="#" method="post" class="form">
+<div class="govuk-!-padding-bottom-6"></div>
+
+   <p class="govuk-body">
+         Enter an email address where your client can receive a secure link to complete the online financial assessment.
+      </p>
+
+<div class="govuk-!-padding-bottom-2"></div>
+
+<div class="govuk-form-group govuk-form-group--error">
+
+    <form action="check_answers" method="post" class="form">
 
       <div class="govuk-form-group">
-          <label class="govuk-label govuk-!-font-weight-bold" for="email-address">
+          <label class="govuk-label" for="email-address">
           Email address
           </label>
           <span id="national-insurance-number-error" class="govuk-error-message">
@@ -58,12 +67,8 @@
   </span>
         <input class="govuk-input govuk-!-width-three-quarters govuk-input--error" id="email-address" name="client-email-address" type="text">
       </div>
-    </div>
 
-      <p class="govuk-body">
-         An email containing a secure link will be sent to the email address entered, please ensure your client is happy to recieve this.
-      </p>
-
+</div>
       <!-- <div class="govuk-warning-text">
   <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
   <strong class="govuk-warning-text__text">
@@ -75,28 +80,6 @@
       <button class="govuk-button">Continue</button>
 
     </form>
-
-<div class="govuk-!-padding-bottom-6"></div>
-
-
-<details class="govuk-details">
-  <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-      Help with completing this application
-    </span>
-  </summary>
-  <div class="govuk-details__text">
-    <p>For any queries about your application, contact the following:
-      <br><br>
-          Case enquires (Monday to Friday, 09:00 - 17:00) <br>
-                Phone: 0300 200 2020
-		    <br><br>
-		        Technical support (Monday to Friday, 09:00 - 17:00) <br>
-		           Email: <a href="#noop">online-support@justice.gov.uk</a> <br>
-		              Phone: 0300 200 2020
-		</p>
-  </div>
-</details>
 
 </div>
 </div>
