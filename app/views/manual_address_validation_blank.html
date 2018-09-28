@@ -7,12 +7,6 @@
   Apply for legal aid
 {% endblock %}
 
-{% block pageScripts %}
-<script>
-
-</script>
-{% endblock %}
-
 {% block beforeContent %}
 {{ govukPhaseBanner({
 tag: {
@@ -51,18 +45,18 @@ href: "#"
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-<div class="govuk-form-group govuk-form-group--error">
-  <form action="#" id="mock-address-lookup" method="post" class="form">
-      <fieldset class="govuk-fieldset">
-  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
     <h1 class="govuk-fieldset__heading">
       Enter your client's address manually
     </h1>
-  </legend>
+    </legend>
 
-  <div class="govuk-!-padding-bottom-8"></div>
+    <div class="govuk-!-padding-bottom-8"></div>
 
+<div class="govuk-form-group--error">
   <div class="govuk-form-group">
+
     <label class="govuk-label" for="address-line-1">
       Building and street
       <span class="govuk-visually-hidden">line 1 of 2</span>
@@ -79,8 +73,9 @@ href: "#"
     </label>
     <input class="govuk-input govuk-input--error" id="address-line-2" name="address-line-2" type="text">
   </div>
+</div>
 
-  <div class="govuk-form-group">
+  <div class="govuk-form-group govuk-form-group--error">
     <label class="govuk-label" for="address-town">
       Town or city
     </label>
@@ -97,7 +92,7 @@ href: "#"
     <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text">
   </div>
 
-  <div class="govuk-form-group">
+  <div class="govuk-form-group govuk-form-group--error">
     <label class="govuk-label" for="address-postcode">
       Postcode
     </label>
@@ -106,14 +101,10 @@ href: "#"
     </span>
     <input class="govuk-input govuk-input--width-10 govuk-input--error" id="address-postcode" name="address-postcode" type="text">
   </div>
-
-</fieldset>
-</div>
-
+  
         <input class="govuk-button" type="submit" value="Continue">
 
-  </form>
-
+</div>
 </div>
 
 
