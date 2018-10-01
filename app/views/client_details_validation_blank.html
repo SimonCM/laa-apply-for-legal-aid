@@ -33,7 +33,10 @@ href: "#"
         <a href="#full-name">Enter full name</a>
       </li>
       <li>
-        <a href="#dob">Enter date of birth</a>
+        <a href="#dob">Enter a date of birth</a>
+      </li>
+      <li>
+        <a href="#dob">Enter a national insurance number</a>
       </li>
     </ul>
   </div>
@@ -52,7 +55,7 @@ href: "#"
 
         <div class="govuk-form-group govuk-form-group--error" id="full-name">
 
-            <label class="govuk-label govuk-!-font-weight-bold" for="full-name">
+            <label class="govuk-label" for="full-name">
             Full name
             </label>
             <span id="full-name-hint" class="govuk-hint">
@@ -68,14 +71,14 @@ href: "#"
 
         <div class="govuk-form-group govuk-form-group--error">
   <fieldset class="govuk-fieldset" aria-describedby="dob-hint dob-error" role="group">
-    <label class="govuk-label govuk-!-font-weight-bold" for="full-name">
+    <label class="govuk-label" for="full-name">
     Date of birth
     </label>
     <span id="dob-hint" class="govuk-hint">
       For example, 31 3 1980
     </span>
     <span id="dob-error" class="govuk-error-message">
-      Enter date of birth
+      Enter a date of birth
     </span>
     <div class="govuk-date-input" id="dob">
 
@@ -84,7 +87,7 @@ href: "#"
           <label class="govuk-label govuk-date-input__label" for="dob-day">
             Day
           </label>
-          <input class="govuk-input govuk-date-input__input govuk-input--width-2 " id="dob-day" name="dob-day" type="number" value="" pattern="[0-9]*">
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2 govuk-input--error" id="dob-day" name="dob-day" type="number" value="" pattern="[0-9]*">
         </div>
       </div>
 
@@ -93,7 +96,7 @@ href: "#"
           <label class="govuk-label govuk-date-input__label" for="dob-month">
             Month
           </label>
-          <input class="govuk-input govuk-date-input__input govuk-input--width-2 " id="dob-month" name="dob-month" type="number" value="" pattern="[0-9]*">
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2 govuk-input--error" id="dob-month" name="dob-month" type="number" value="" pattern="[0-9]*">
         </div>
       </div>
 
@@ -102,7 +105,7 @@ href: "#"
           <label class="govuk-label govuk-date-input__label" for="dob-year">
             Year
           </label>
-          <input class="govuk-input govuk-date-input__input govuk-input--width-4 " id="dob-year" name="dob-year" type="number" value="" pattern="[0-9]*">
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4 govuk-input--error" id="dob-year" name="dob-year" type="number" value="" pattern="[0-9]*">
         </div>
       </div>
     </div>
@@ -111,95 +114,50 @@ href: "#"
 
 
 
-     <div class="govuk-!-padding-bottom-2"></div>
+<div class="govuk-!-padding-bottom-2"></div>
 
-        <div class="govuk-form-group">
-            <label class="govuk-label govuk-!-font-weight-bold" for="address-postcode">
-            Postcode
-            </label>
-            <span id="postcode-hint" class="govuk-hint">
-              Please use your client home address
-            </span>
-          <input class="govuk-input govuk-input--width-10" id="address-postcode" name="client-address-postcode" type="text" value="W1A 1AA">
+<div class="govuk-form-group govuk-form-group--error">
 
-        </div>
-
-        <button class="govuk-button">Find address</button>
-
-
-          </div>
-          </div>
-
-        </fieldset>
+      <label class="govuk-label" for="national-insurance-number">
+       National Insurance number
+      </label>
+      <span id="national-insurance-number-hint" class="govuk-hint">
+        For example, ‘QQ 12 34 56 C’
+      </span>
+      <span id="dob-error" class="govuk-error-message">
+        Enter a national insurance number
+      </span>
+      <input class="govuk-input govuk-!-width-one-half govuk-input--error" id="national-insurance-number" name="client-national-insurance-number" type="text">
+</div>
+ <div class="govuk-!-padding-bottom-6"></div>
 
       <details class="govuk-details">
-        <summary class="govuk-details__summary ">
+        <summary class="govuk-details__summary">
           <span class="govuk-details__summary-text">
-          Enter address manually
+            I don't have my client's National Insurance number
           </span>
         </summary>
-        <div class="govuk-!-padding-bottom-4"></div>
-
-        <div class="govuk-form-group">
-      <label class="govuk-label" for="address-line-1">
-      Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
-      </label>
-      <input class="govuk-input govuk-!-width-two-thirds" id="two-thirds" name="two-thirds" type="text">
-      </div>
-
-      <div class="govuk-form-group">
-      <label class="govuk-label" for="address-line-2">
-      <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
-      </label>
-      <input class="govuk-input govuk-!-width-two-thirds" id="two-thirds" name="two-thirds" type="text">
-      </div>
-
-      <div class="govuk-form-group">
-      <label class="govuk-label" for="address-town">
-      Town or city
-      </label>
-      <input class="govuk-input govuk-!-width-one-third" id="one-third" name="one-third" type="text">
-      </div>
-
-      <div class="govuk-form-group">
-      <label class="govuk-label" for="address-county">
-      County
-      </label>
-      <input class="govuk-input govuk-!-width-one-third" id="one-third" name="one-third" type="text">
-      </div>
-
-      <div class="govuk-form-group">
-      <label class="govuk-label" for="address-postcode">
-      Postcode
-      </label>
-      <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
-      </div>
-
+        <div class="govuk-details__text">
+          <p>For any queries about your application, contact the following:
+            <br><br>
+                Case enquires (Monday to Friday, 09:00 - 17:00) <br>
+                      Phone: 0300 200 2020
+             <br><br>
+                 Technical support (Monday to Friday, 09:00 - 17:00) <br>
+                    Email: <a href="#noop">online-support@justice.gov.uk</a> <br>
+                       Phone: 0300 200 2020
+         </p>
+        </div>
       </details>
 
-      <div class="govuk-!-padding-bottom-6"></div>
+     </div>
+     </div>
 
-    <details class="govuk-details">
-      <summary class="govuk-details__summary">
-        <span class="govuk-details__summary-text">
-          Help with completing this application
-        </span>
-      </summary>
-      <div class="govuk-details__text">
-        <p>For any queries about your application, contact the following:
-          <br><br>
-            Case enquires (Monday to Friday, 09:00 - 17:00) <br>
-            Phone: 0300 200 2020
-    		   <br><br>
-    		    Technical support (Monday to Friday, 09:00 - 17:00) <br>
-    		    Email: <a href="#noop">online-support@justice.gov.uk</a> <br>
-    		    hone: 0300 200 2020
-    		</p>
-      </div>
-    </details>
+     <div class="govuk-form-group">
+       <input class="govuk-button" type="submit" value="Continue">
+     </div>
 
-    </div>
-  </div>
+   </form>
 {% endblock %}
 
 {% block footer %}
