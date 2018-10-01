@@ -30,7 +30,7 @@ href: "#"
   <div class="govuk-error-summary__body">
     <ul class="govuk-list govuk-error-summary__list">
       <li>
-        <a href="#address-line-1">Enter a building and street</a>
+        <a href="#address-postcode">Enter a postcode</a>
       </li>
     </ul>
   </div>
@@ -48,26 +48,22 @@ href: "#"
 
     <div class="govuk-!-padding-bottom-8"></div>
 
-<div class="govuk-form-group--error">
   <div class="govuk-form-group">
 
     <label class="govuk-label" for="address-line-1">
       Building and street
       <span class="govuk-visually-hidden">line 1 of 2</span>
     </label>
-    <span id="full-name-error" class="govuk-error-message">
-      Enter a building and street
-    </span>
-    <input class="govuk-input govuk-input--error" id="address-line-1" name="address-line-1" type="text">
+    <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" value="1 Main Street">
   </div>
 
   <div class="govuk-form-group">
     <label class="govuk-label" for="address-line-2">
       <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
     </label>
-    <input class="govuk-input govuk-input--error" id="address-line-2" name="address-line-2" type="text">
+    <input class="govuk-input" id="address-line-2" name="address-line-2" type="text">
   </div>
-</div>
+
 
   <div class="govuk-form-group">
     <label class="govuk-label" for="address-town">
@@ -83,11 +79,14 @@ href: "#"
     <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text">
   </div>
 
-  <div class="govuk-form-group">
+  <div class="govuk-form-group govuk-form-group--error">
     <label class="govuk-label" for="address-postcode">
       Postcode
     </label>
-    <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" value="W1A 1AA">
+    <span id="full-name-error" class="govuk-error-message">
+      Enter a postcode
+    </span>
+    <input class="govuk-input govuk-input--width-10 govuk-input--error" id="address-postcode" name="address-postcode" type="text">
   </div>
 
         <input class="govuk-button" type="submit" value="Continue">
