@@ -30,13 +30,16 @@ href: "#"
   <div class="govuk-error-summary__body">
     <ul class="govuk-list govuk-error-summary__list">
       <li>
-        <a href="#full-name">Enter full name</a>
+        <a href="#first-name">Enter a first name</a>
+      </li>
+      <li>
+        <a href="#last-name">Enter a last name</a>
       </li>
       <li>
         <a href="#dob">Enter a date of birth</a>
       </li>
       <li>
-        <a href="#dob">Enter a national insurance number</a>
+        <a href="#national-insurance-number">Enter a national insurance number</a>
       </li>
     </ul>
   </div>
@@ -53,21 +56,30 @@ href: "#"
 
   <div class="govuk-!-padding-bottom-8"></div>
 
-        <div class="govuk-form-group govuk-form-group--error" id="full-name">
+  <div class="govuk-form-group govuk-form-group--error">
 
-            <label class="govuk-label" for="full-name">
-            Full name
-            </label>
-            <span id="full-name-hint" class="govuk-hint">
-    Including all middle names
-  </span>
-  <span id="full-name-error" class="govuk-error-message">
-    Enter full name
-  </span>
-          <input class="govuk-input govuk-!-width-two-thirds govuk-input--error" id="full-name" name="client-full-name" type="text" aria-describedby="full-name-hint full-name-error">
-        </div>
+      <label class="govuk-label" for="first-name">
+      First name
+      </label>
+      <span id="first-name-error" class="govuk-error-message">
+        Enter a first name
+      </span>
+    <input class="govuk-input govuk-!-width-one-half govuk-input--error" id="first-name" name="client-first-name" type="text">
+  </div>
 
-        <div class="govuk-!-padding-bottom-2"></div>
+  <div class="govuk-!-padding-bottom-2"></div>
+
+  <div class="govuk-form-group govuk-form-group--error">
+      <label class="govuk-label" for="last-name">
+      Last name
+      </label>
+      <span id="last-name-error" class="govuk-error-message">
+        Enter a last name
+      </span>
+    <input class="govuk-input govuk-!-width-one-half govuk-input--error" id="last-name" name="client-last-name" type="text">
+  </div>
+
+  <div class="govuk-!-padding-bottom-2"></div>
 
         <div class="govuk-form-group govuk-form-group--error">
   <fieldset class="govuk-fieldset" aria-describedby="dob-hint dob-error" role="group">

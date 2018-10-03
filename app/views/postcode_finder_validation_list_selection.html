@@ -36,7 +36,7 @@ href: "#"
   <div class="govuk-error-summary__body">
     <ul class="govuk-list govuk-error-summary__list">
       <li>
-        <a href="#dob-error">Enter a postcode</a>
+        <a href="#event-address">Select an address from the dropdown list</a>
       </li>
     </ul>
   </div>
@@ -45,7 +45,6 @@ href: "#"
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-<div class="govuk-form-group">
       <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
     <h1 class="govuk-fieldset__heading">
       Enter your client's home address
@@ -58,30 +57,51 @@ href: "#"
 
 
 
-<div class="address-lookup-step1">
-        <div class="govuk-form-group govuk-form-group--error">
+
+          </div>
+          </div>
+
+
+
+        <div class="address-lookup-step1">
+          <div class="govuk-form-group">
+
             <label class="govuk-label" for="address-postcode">
-            Enter postcode
-            </label>
-            <span id="postcode-hint" class="govuk-hint">
-              Postcode must be a valid UK postcode.
+            Postcode
+            <p class="govuk-body govuk-!-font-weight-bold" style="padding-top:4px;"><a>W1A 1AA</a> &nbsp <a class="govuk-body change-link" id="change-address" >Change</a></p>
+
+          </label>
+          </div>
+
+              <div class="govuk-!-padding-bottom-2"></div>
+
+<div class="govuk-form-group govuk-form-group--error">
+
+            <label class="govuk-label" for="event-address">Select an address</label>
+            <span id="address-list-error" class="govuk-error-message">
+              Select an address from the dropdown list
             </span>
-            <span id="nationality-error" class="govuk-error-message">
-      Enter a postcode
-    </span>
-          <input class="govuk-input govuk-input--width-10 govuk-input--error" id="address-postcode" name="address-postcode" type="text">
+            <select class="govuk-select govuk-!-width-one-half govuk-select--error" id="event-address" name="event-addresst">
+              <option>5 addresses found</option>
+              <option>1 Main Street, London, W1A 1AA </option>
+              <option>2 Main Street, London, W1A 1AA </option>
+              <option>3 Main Street, London, W1A 1AA </option>
+              <option>4 Main Street, London, W1A 1AA </option>
+              <option>5 Main Street, London, W1A 1AA </option>
+            </select>
 
+          </div>
+
+          <p>
+            <a class="govuk-link" href="manual_address">I can't find the address in the list</a>
+          </p>
+
+          <div class="govuk-form-group">
+            <input class="govuk-button" type="submit" value="Continue">
+          </div>
         </div>
-<div class="govuk-form-group">
-        <input type="submit" class="govuk-button" id="" value="Find address">
-</div>
-        <p>
-          <a class="govuk-link" href="#">Enter address manually</a>
-        </p>
-</div>
 
-          </div>
-          </div>
+
 
 </form>
 
