@@ -42,7 +42,25 @@ href: "/client_details"
 
       <form action="dwp_check" id="mock-address-lookup" method="post" class="form">
 
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            </legend>
+            <span id="sign-in-hint" class="govuk-hint">
+              You&#39;ll need an account to prove your identity and complete your Self Assessment.
+            </span>
+            <div class="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="sign-in-1" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-1-item-hint">
+                <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in-1">
+                  No fixed address
+                </label>
 
+              </div>
+
+            </div>
+          </fieldset>
+        </div>
 
 <div class="address-lookup-step1">
         <div class="govuk-form-group">
@@ -61,32 +79,6 @@ href: "/client_details"
         <p>
           <a class="govuk-link" href="manual_address">Enter address manually</a>
         </p>
-
-        <details class="govuk-details">
-      <summary class="govuk-details__summary">
-      <span class="govuk-details__summary-text">
-      No fixed address
-      </span>
-      </summary>
-      <div class="govuk-details__text">
-        <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-
-      <div class="govuk-radios govuk-radios--inline">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
-          <label class="govuk-label govuk-radios__label" for="changed-name-1">
-            Yes
-          </label>
-        </div>
-        
-      </div>
-    </fieldset>
-  </div>
-      </div>
-      </details>
-
 </div>
 
           </div>
@@ -122,14 +114,33 @@ href: "/client_details"
             <a class="govuk-link" href="manual_address">I can't find the address in the list</a>
           </p>
 
-
-
           <div class="govuk-form-group">
             <input class="govuk-button" type="submit" value="Continue">
           </div>
         </div>
 
+        <p class="govuk-body">or  </p>
 
+
+ <div class="govuk-form-group">
+   <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+     <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+     </legend>
+     <span id="sign-in-hint" class="govuk-hint">
+       You&#39;ll need an account to prove your identity and complete your Self Assessment.
+     </span>
+     <div class="govuk-radios">
+       <div class="govuk-radios__item">
+         <input class="govuk-radios__input" id="sign-in-1" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-1-item-hint">
+         <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in-1">
+           No fixed address
+         </label>
+
+       </div>
+
+     </div>
+   </fieldset>
+ </div>
 
 </form>
 
