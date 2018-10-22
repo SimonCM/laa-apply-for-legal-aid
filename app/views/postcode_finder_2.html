@@ -18,7 +18,7 @@
 tag: {
   text: "prototype"
 },
-html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+html: 'This is a new service – your <a class="govuk-link" href="">feedback</a> will help us to improve it.'
 }) }}
 
 {{ govukBackLink({
@@ -34,61 +34,52 @@ href: "/postcode_finder"
 
       <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
     <h1 class="govuk-fieldset__heading">
-      Enter your client's correspondence address manually
+      Enter a correspondence address for your client
     </h1>
   </legend>
 
-</div>
-</div>
-
   <div class="govuk-!-padding-bottom-8"></div>
-
-
 
       <form action="dwp_check" id="mock-address-lookup" method="post" class="form">
 
+<div class="address-lookup-step1">
         <div class="govuk-form-group">
-        <label class="govuk-label" for="address-line-1">
-        Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
+          <label class="govuk-label" for="address-postcode">
+          Postcode
+          <p class="govuk-body govuk-!-font-weight-bold" style="padding-top:4px;"><a>{{ data['address-postcode'] }}</a> &nbsp <a class="govuk-body change-link" id="change-address">Change</a></p>
+
         </label>
-        <input class="govuk-input govuk-!-width-two-thirds" id="two-thirds" name="two-thirds" type="text">
+
+
+            <div class="govuk-!-padding-bottom-2"></div>
+
+          <label class="govuk-label" for="event-address">Select an address</label>
+          <select class="govuk-select govuk-!-width-two-thirds" id="event-address" name="event-addresst">
+            <option>5 addresses found</option>
+            <option>1 Main Street, London, {{ data['address-postcode'] }} </option>
+            <option>2 Main Street, London, {{ data['address-postcode'] }} </option>
+            <option>3 Main Street, London, {{ data['address-postcode'] }} </option>
+            <option>4 Main Street, London, {{ data['address-postcode'] }} </option>
+            <option>5 Main Street, London, {{ data['address-postcode'] }} </option>
+          </select>
+
         </div>
 
-        <div class="govuk-form-group">
-        <label class="govuk-label" for="address-line-2">
-        <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
-        </label>
-        <input class="govuk-input govuk-!-width-two-thirds" id="two-thirds" name="two-thirds" type="text">
-        </div>
+        <p>
+          <a class="govuk-link" href="manual_address_2">I can't find the address in the list</a>
+        </p>
 
         <div class="govuk-form-group">
-        <label class="govuk-label" for="address-town">
-        Town or city
-        </label>
-        <input class="govuk-input govuk-!-width-one-third" id="one-third" name="one-third" type="text">
+          <input class="govuk-button" type="submit" value="Continue">
         </div>
 
-        <div class="govuk-form-group">
-        <label class="govuk-label" for="address-county">
-        County
-        </label>
-        <input class="govuk-input govuk-!-width-one-third" id="one-third" name="one-third" type="text">
-        </div>
+</div>
+          </div>
 
-        <div class="govuk-form-group">
-        <label class="govuk-label" for="address-postcode">
-        Postcode
-        </label>
-        <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
-        </div>
-
-        <input class="govuk-button" type="submit" value="Continue">
-
-  </form>
+</form>
 
 
-
-
+  </div>
 {% endblock %}
 
 {% block footer %}
