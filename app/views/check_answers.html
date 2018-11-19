@@ -42,7 +42,7 @@ href: "email_address"
           Application for care order{{ data['...'] }}
         </dd>
         <dd class="app-check-your-answers__change">
-          <a href="search">
+          <a href="search#two-thirds">
             Change <span class="govuk-visually-hidden">proceeding</span>
           </a>
         </dd>
@@ -52,9 +52,7 @@ href: "email_address"
    <h2 class="govuk-heading-m">
      Client details
    </h2>
-   <a href="client_details">
-     Change <span class="govuk-visually-hidden">first name</span>
-   </a>
+
    <dl class="app-check-your-answers app-check-your-answers--long" style="margin-bottom: 60px;">
      <div class="app-check-your-answers__contents">
        <dt class="app-check-your-answers__question">
@@ -64,7 +62,7 @@ href: "email_address"
          {{ data['client-first-name'] }}
        </dd>
        <dd class="app-check-your-answers__change">
-         <a href="client_details">
+         <a href="client_details#client-first-name">
            Change <span class="govuk-visually-hidden">first name</span>
          </a>
        </dd>
@@ -77,6 +75,9 @@ href: "email_address"
          {{ data['client-last-name'] }}
        </dd>
        <dd class="app-check-your-answers__change">
+         <a href="client_details#client-last-name">
+           Change <span class="govuk-visually-hidden">last name</span>
+         </a>
        </dd>
      </div>
      <div class="app-check-your-answers__contents">
@@ -87,6 +88,9 @@ href: "email_address"
          {{ data['client-dob-day'] }}/{{ data['client-dob-month'] }}/{{ data['client-dob-year'] }}
        </dd>
        <dd class="app-check-your-answers__change">
+         <a href="client_details#client-dob-day">
+           Change <span class="govuk-visually-hidden">dob</span>
+         </a>
        </dd>
      </div>
      <div class="app-check-your-answers__contents">
@@ -97,6 +101,9 @@ href: "email_address"
          {{ data['client-national-insurance-number'] }}
        </dd>
        <dd class="app-check-your-answers__change">
+         <a href="client_details#client-national-insurance-number">
+           Change <span class="govuk-visually-hidden">national insurance number</span>
+         </a>
        </dd>
      </div>
      <div class="app-check-your-answers__contents">
@@ -107,8 +114,8 @@ href: "email_address"
          Main Road<br/>London<br/>{{ data['address-postcode'] }}
        </dd>
        <dd class="app-check-your-answers__change">
-         <a href="postcode_finder">
-           Change <span class="govuk-visually-hidden">Correspondance address</span>
+         <a href="postcode_finder#address-postcode">
+           Change <span class="govuk-visually-hidden">correspondance address</span>
          </a>
        </dd>
      </div>
